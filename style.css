@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: #fafafa;
+   display: grid;
+   place-items: center;
+    margin: 0px;
+    padding: 0px;
+   
+}
+ .cards {
+   display: grid;
+   place-items: center;
+ }
+.container{
+   width: 100%;
+   max-width: 440px;
+   padding: 40px 0;
+   display: grid;
+   place-items: center;
+   
+   
+}
+@font-face {
+    font-family: "thin";
+    src: url(fonts/Poppins-Thin.ttf);
+}
+
+.container .header {
+    text-align: center;
+    width: 90%;
+    
+    
+}
+.container .header h1{
+    font-family: thin;
+    color: #6b6a71;
+    font-size: 2rem;
+    line-height: 1em;
+}
+@font-face {
+    font-family: "bold";
+    src: url(fonts/Poppins-SemiBold.ttf);
+}
+.container .header h2{
+    font-family: bold;
+    color: #4f505f;
+    font-size: 2rem;
+    padding-bottom: 0.5em;
+    line-height: 1em;
+}
+
+.container .header p {
+    font-family: thin;
+    font-weight: 600;
+    color: #acacad;
+    padding-bottom: 2em;
+    
+}
+
+.container .supervisor {
+    width: 90%;
+    box-shadow: #dce5ef 10px 15px 15px;
+    border-radius: 5px;
+    padding: 20px;
+    border-top-color: #53cccb ;
+    border-top-style: solid;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.container .supervisor h1 {
+  font-family: bold;
+  color: #4f505f;
+  font-size: large;
+}
+
+.container .supervisor p {
+    font-family: thin;
+    font-weight: 600;
+    color: #acacad;
+    font-size: small;
+    width: 70%;
+  }
+
+.container .supervisor .iconsuper {
+    padding-left: 80%;
+}
+
+
+.container .team {
+    width: 90%;
+    box-shadow: #dce5ef 10px 15px 15px;
+    border-radius: 5px;
+    padding: 20px;
+    border-top-color: #d65c60 ;
+    border-top-style: solid;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.container .team h1 {
+  font-family: bold;
+  color: #4f505f;
+  font-size: large;
+}
+
+.container .team p {
+    font-family: thin;
+    font-weight: 600;
+    color: #acacad;
+    font-size: small;
+    width: 70%;
+  }
+
+.container .team .iconteam {
+    padding-left: 80%;
+}
+
+.container .karma {
+    width: 90%;
+    box-shadow: #dce5ef 10px 15px 15px;
+    border-radius: 5px;
+    padding: 20px;
+    border-top-color: #eeae5e ;
+    border-top-style: solid;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.container .karma h1 {
+  font-family: bold;
+  color: #4f505f;
+  font-size: large;
+}
+
+.container .karma p {
+    font-family: thin;
+    font-weight: 600;
+    color: #acacad;
+    font-size: small;
+    width: 70%;
+  }
+
+.container .karma .iconkarma {
+    padding-left: 80%;
+}
+
+
+.container .calculator {
+    width: 90%;
+    box-shadow: #dce5ef 10px 15px 15px;
+    border-radius: 5px;
+    padding: 20px;
+    border-top-color: #5a9ae3;
+    border-top-style: solid;
+    transition: 0.3s;
+    
+}
+
+.container .calculator h1 {
+  font-family: bold;
+  color: #4f505f;
+  font-size: large;
+}
+
+.container .calculator p {
+    font-family: thin;
+    font-weight: 600;
+    color: #acacad;
+    font-size: small;
+    width: 70%;
+  }
+
+.container .calculator .iconcalculator {
+    padding-left: 80%;
+}
+
+.supervisor:hover{
+    transform: scale(1.05, 1.05);
+    color: white;
+    background-color: #ccfafa;
+    cursor: pointer;
+}
+
+.team:hover{
+    transform: scale(1.05, 1.05);
+    color: white;
+    background-color: #f7dddd;
+    cursor: pointer;
+}
+
+.karma:hover{
+    transform: scale(1.05, 1.05);
+    color: white;
+    background-color: #ffedd7;
+    cursor: pointer;
+}
+
+.calculator:hover{
+    transform: scale(1.05, 1.05);
+    color: white;
+    background-color: #d3e8ff;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+
+    .container{
+        width: 100%;
+        max-width: 992px;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "start mid1 end" 
+        "start mid2 end";
+    }
+
+  
+    .supervisor {
+        grid-area: start;
+        align-self: center;
+    }
+
+    .team {
+        grid-area: mid1;
+    }
+
+    .karma {
+        grid-area: mid2;
+        width: auto;
+       
+    }
+
+    .calculator {
+        grid-area: end;
+        align-self: center;
+
+    }
+
+}
